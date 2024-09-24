@@ -1,0 +1,208 @@
+:root {
+  --clr-primary-title: hsl(14, 45%, 36%);
+  --clr-secondary-title: hsl(332, 51%, 32%);
+  --clr-font-primary: hsl(24, 5%, 18%);
+  --clr-font-secondary: hsl(30, 10%, 34%);
+
+  --clr-neutral: hsl(330, 100%, 98%);
+  --clr-neutral-background-1: hsl(30, 54%, 90%);
+  --clr-neutral-background-2: hsl(30, 18%, 87%);
+
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* Font */
+  --font-accent: "Young Serif", serif;
+  --font-base: "Outfit", sans-serif;
+
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-extrabold: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+/* *::before,
+*::after {
+  box-sizing: border-box;
+} */
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ul,
+ol {
+  padding: 0 1rem;
+}
+
+/* Generate Styling */
+body {
+  font-family: var(--font-base);
+  font-size: 0.875rem;
+  background-color: var(--clr-neutral-background-1);
+  color: var(--clr-font-secondary);
+
+  /* Project Only */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  height: 150vh;
+  padding: 12rem;
+  margin: 1rem;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-neutral);
+  justify-items: center;
+  overflow: visible;
+  max-width: 45em;
+  padding: 2rem;
+  margin: 6rem 0;
+  border-radius: 1.5rem;
+  gap: 2rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title-card {
+  font-family: var(--font-accent);
+  font-size: 2.5rem;
+  color: var(--clr-font-primary);
+  margin-top: 1rem;
+  font-weight: var(--fw-semibold);
+}
+
+.img-card {
+  border-radius: 1rem;
+}
+
+/* Preparation */
+.preparation-section {
+  padding: 2rem;
+}
+.title-preparation {
+  font-size: 1.2rem;
+  color: var(--clr-secondary-title);
+  margin-bottom: 1rem;
+}
+
+/* Section */
+.title-section {
+  color: var(--clr-primary-title);
+  font-family: var(--font-accent);
+  font-weight: var(--fw-regular);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+[data-cell="nutrion-value"] {
+  color: var(--clr-primary-title);
+  font-weight: var(--fw-semibold);
+}
+
+li {
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+li::marker {
+  color: var(--clr-primary-title);
+  font-weight: var(--fw-semibold);
+}
+
+span {
+  font-weight: var(--fw-extrabold);
+}
+
+hr {
+  outline: none;
+  border: none;
+  height: 1px;
+  background: var(--clr-neutral-background-2);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+  border-bottom: 1px solid var(--clr-neutral-background-1);
+}
